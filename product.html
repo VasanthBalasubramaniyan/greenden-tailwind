@@ -14,7 +14,7 @@
             
         <h1 class="text-2xl">GREENDEN</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
             
@@ -25,13 +25,25 @@
         </ul>
     </nav>  
 
+    <!-- Side Navbar -->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000 " style="width: 50%; height: 100vh; right: -50%">
+        <div class="text-right p-5">
+            <p id="close-nav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li><a class="hover:underline hover:text-black" href="./index.html">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="./product.html">Products</a></li>
+            <li><a class="hover:underline hover:text-black" href="./contact.html">Contact</a></li>
+        </ul>
+     </section>
+
     <section>
         <div class="product mt-10">
             <h1 class="flex justify-center font-bold text-3xl mb-5">Our Products</h1>
-            <input type="text" class="flex justify-center m-auto mb-5 p-2 border border-black" placeholder="Search for a product" style="width: 70%;">
+            <input id="search" type="text" class="flex justify-center m-auto mb-5 p-2 border border-black" placeholder="Search for a product" style="width: 70%;">
         </div>
 
-        <div class="p-4 text-center grid grid-cols-2 md:grid-cols-4 gap-5 mt-5">
+        <div id="product-container" class="p-4 text-center grid grid-cols-2 md:grid-cols-4 gap-5 mt-5">
             <div class="">
                 <img src="./images/bs_1.jpg" class="inline hover:shadow-xl transform hover:translate-y-2" alt="">
                 <h1>Rose Plant</h1>
@@ -101,5 +113,8 @@
         <p>The Standard chunk of Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <p>&copy; 2021 Greenday.com</p>
      </section>
+
+    <!-- Script -->
+     <script src="product.js"></script>
 </body>
 </html>
